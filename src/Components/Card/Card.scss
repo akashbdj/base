@@ -1,0 +1,60 @@
+.card {
+    &__title {
+        font-size: 16px;
+        border-bottom: 1px solid rgba(34, 34, 34, 0.05);
+        display: flex;
+        align-content: center;
+        line-height: 36px;
+        background-color: #fff;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        a {
+            max-height: 45px;
+        }
+        span {
+            margin-left: 6px;
+            line-height: 1.5;
+        }
+    }
+
+    &__title--bolder {
+        font-weight: bolder;
+    }
+
+    &__content--60-40 {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .card {
+        &__content--60-40 {
+            display: grid;
+            grid-template-columns: 100%;
+        }
+
+        &__title {
+            border-top: 1px solid rgba(34, 34, 34, 0.1);
+            border-radius: 0;
+        }
+
+        .request__details {
+            order: 0;
+        }
+
+        .meta-data {
+            order: 1;
+        }
+
+        .approval {
+            order: 2;
+        }
+
+        .actions {
+            order: 3;
+        }
+    }
+}

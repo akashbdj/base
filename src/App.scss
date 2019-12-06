@@ -1,0 +1,223 @@
+/*
+Colors CSS
+*/
+$color-yellow: #FFA03D;
+$color-gray: rgba(34, 34, 34, 0.5);
+$color-bg: #F9FAFB;
+$color-green: #26C281;
+$color-red: #FF6448;
+
+/*
+Font sizes CSS
+*/
+.font-12 {
+  font-size: 12px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px;
+}
+
+/*
+Font weight CSS
+*/
+.font-400 {
+  font-weight: 400;
+}
+.font-500 {
+  font-weight: 500;
+}
+.font-700 {
+  font-weight: 700;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  width: 850px;
+  display: grid;
+  gap: 20px;
+}
+
+.security-message {
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/*
+Helper Classes
+*/
+.pad-20 {
+  padding: 20px;
+}
+
+.pad-15 {
+  padding: 15px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.border-btm{
+  border-bottom: 1px solid rgba(34, 34, 34, 0.05);
+}
+
+.border-rgt{
+  border-right: 1px solid rgba(34, 34, 34, 0.05);
+}
+
+label {
+  opacity: 0.5;
+}
+
+/*
+Button CSS
+*/
+.btn {
+  color: white;
+  border: 0;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid rgba(34, 34, 34, 0.05);
+
+  &--success {
+    background-color: $color-green;
+  }
+  &--error {
+    background-color: $color-red;
+  }
+}
+
+/*
+  Flex
+*/
+
+.display-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/*
+Text Colors CSS
+*/
+.text-yellow {
+  color: $color-yellow;
+}
+.text-gray {
+  color: $color-gray;
+}
+
+/*
+Text Align CSS
+*/
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+/*
+Checkbox CSS
+*/
+.status {
+  position: relative;
+}
+
+.status label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  opacity: 1;
+}
+
+.status label:after {
+  border: 1.5px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 3px;
+  left: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  transform: rotate(-45deg);
+  width: 8px;
+}
+
+.status input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.status input[type="checkbox"]:checked+label {
+  background-color: $color-green;
+  border-color: $color-green;
+}
+
+.status input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
+
+
+
+
+/**
+Media Queries CSS
+**/
+// @media only screen and (min-width: 768px) {
+//   /* tablets and desktop */
+// }
+
+// @media only screen and (max-width: 767px) {
+//   /* phones */
+// }
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* portrait phones */
+  .container {
+    display: grid;
+  }
+
+  .security-message {
+    margin: 0 15px;
+    border-top: 1px solid rgba(34, 34, 34, 0.1);
+    padding-top: 20px;
+    p {
+      display: block;
+    }
+  }
+
+  .logo {
+    margin: 15px 15px 0;
+  }
+}

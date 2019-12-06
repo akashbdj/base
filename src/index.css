@@ -1,0 +1,28 @@
+@import-normalize;
+body {
+  margin: 0;
+  font-family:
+  "SF Pro Display",
+  "Avenir Next",
+  "Avenir",
+  "Segoe UI",
+  "Lucida Grande",
+  "Helvetica Neue",
+  "Helvetica",
+  "Fira Sans",
+  "Roboto",
+  "Noto",
+  "Droid Sans",
+  "Cantarell",
+  "Oxygen",
+  "Ubuntu",
+  "Franklin Gothic Medium",
+  "Century Gothic",
+  "Liberation Sans",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+}

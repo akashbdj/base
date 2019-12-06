@@ -1,0 +1,72 @@
+.approval {
+    font-size: 12px;
+    color: #878788;
+    border-left: 1px solid rgba(34, 34, 34, 0.05);
+    background-color: #fff;
+    grid-column-start: 2;
+    grid-row: 1 / span 2;
+    border-bottom-right-radius: 8px;
+    max-height: 478px;
+    overflow-y: scroll
+}
+
+.approved {
+    margin-bottom: 15px;
+}
+
+.no-approved, .no-pending {
+    text-align: center;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.approver {
+    display: grid;
+    grid-template-columns: 25px 30px 1fr 30px;
+    margin: 15px 0;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.counter div {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #e7eaea;
+    color: #878788;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.user-detail {
+    line-height: 1.2;
+    p {
+        margin: 0;
+    }
+
+    span {
+        font-size: 14px;
+        margin-right: 5px;
+        font-weight: 500;
+    }
+
+    &__meta-info {
+        font-weight: 400 !important;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .approval {
+        padding: 0;
+        border: 0;
+        margin-top: 5px;
+        border-top: 1px solid rgba(34, 34, 34, 0.1);
+        border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+        grid-column-start: unset;
+        grid-row: unset;
+        border-radius: 0;
+    }
+}

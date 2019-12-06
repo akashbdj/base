@@ -1,0 +1,128 @@
+.request {
+    background-color: white;
+    padding: 15px;
+
+    &__details {
+        border-radius: 10px;
+        border: 1px solid rgba(34, 34, 34, 0.05);
+        -webkit-box-shadow: 0px 1px 4px 0px #f1f1f1;
+        -moz-box-shadow: 0px 1px 4px 0px #f1f1f1;
+        box-shadow: 0px 1px 4px 0px #f1f1f1;
+    }
+
+    .file-container {
+        & > div {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.req-ctn {
+    border-right: 1px solid rgba(34, 34, 34, 0.05);
+}
+
+div.req-ctn:last-child {
+    border: 0;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.split-half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    & > div {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+
+        &:first-child {
+            border-right: 1px solid rgba(34, 34, 34, 0.1);
+        }
+    }
+}
+
+div.split:last-child {
+    border: 0px;
+}
+
+.note {
+    color: red;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.info {
+    color: #878788;
+    font-size: 12px;
+}
+
+.actions {
+    background-color: #fff;
+    padding: 0 15px 15px;
+    border-bottom-left-radius: 8px;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .request {
+        padding-top: 25px;
+        // border-top: 1px solid rgba(34, 34, 34, 0.05);
+        border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+    }
+
+    .split {
+        grid-template-columns: 1.4fr 2fr;
+        &#desc {
+            display: block;
+
+            label {
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+        }
+    }
+
+    .split-half {
+        display: block;
+
+        & > div {
+            grid-template-columns: 1.4fr 2fr;
+            border: 0;
+
+            & > span {
+                text-align: left;
+            }
+
+            &:first-child {
+                border: 0;
+            }
+
+            &:last-child {
+                border-top: 1px solid rgba(34, 34, 34, 0.05);
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        margin: 15px;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+
+        button {
+            flex-grow: 1;
+        }
+    }
+}
