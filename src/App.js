@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Logo from './Components/Logo/Logo'
 import Message from './Components/Message/Message'
 import Card from './Components/Card/Card'
+import sampleResponse from './sample-response'
 
 import './App.scss';
 
@@ -16,6 +17,7 @@ function App() {
     fetch('/yo')
       .then(res => res.json())
       .then(data => setData(data))
+      .catch(_ => setData(JSON.parse(sampleResponse))) // Incase you don't serve response through local server.
       .catch(e => console.log("error", e))
   }, [])
 
